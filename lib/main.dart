@@ -97,13 +97,13 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Center(
         child: RaisedButton(
           child: Text(title),
-          onPressed: push(destWidget),
+          onPressed: buttonOnPressedHandle(destWidget),
         ),
       ),
     );
   }
   
-  VoidCallback push(Widget destWidget) {
+  VoidCallback buttonOnPressedHandle(Widget destWidget) {
     return () {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
         return destWidget;
