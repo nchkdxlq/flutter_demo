@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/LayoutDemo.dart';
+import 'package:flutterdemo/Util.dart';
+import 'package:flutterdemo/layout/LayoutEntry.dart';
 
 void main() {
   runApp(MyApp());
@@ -87,28 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget layoutEntry() {
-    return rowItem("Layout", LayoutDemo());
+    return createRowItem(context, Text('Layout'), () => {
+      navigatorPush(context, LayoutEntry()) // 这里为什么不需要分号
+    });
   }
 
-  Widget rowItem(String title, Widget destWidget) {
-    return Container(
-      padding: EdgeInsets.all(10),
-//      margin: EdgeInsets.all(10),
-      child: Center(
-        child: RaisedButton(
-          child: Text(title),
-          onPressed: buttonOnPressedHandle(destWidget),
-        ),
-      ),
-    );
-  }
-  
-  VoidCallback buttonOnPressedHandle(Widget destWidget) {
-    return () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return destWidget;
-      }));
-    };
-  }
 
 }

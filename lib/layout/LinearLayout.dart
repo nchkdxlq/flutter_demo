@@ -2,15 +2,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LayoutDemo extends StatelessWidget {
+class LinearLayout extends StatelessWidget {
 
 	@override
-  Widget build(BuildContext context) {
+	Widget build(BuildContext context) {
 		return Scaffold(
-			appBar: AppBar(title: Text('LayoutDemo'),),
+			appBar: AppBar(title: Text('LinearLayout'),),
 			body: body(context),
 		);
-  }
+	}
 
 	Widget body(BuildContext context) {
 		return Container(
@@ -35,8 +35,8 @@ class LayoutDemo extends StatelessWidget {
 			],
 		);
 	}
-	
-	
+
+
 	Widget rowEntry(BuildContext context) {
 		return Row(
 			mainAxisAlignment: MainAxisAlignment.start,
