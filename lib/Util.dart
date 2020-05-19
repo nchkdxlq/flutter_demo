@@ -21,3 +21,15 @@ Widget createRowItem(BuildContext context, Widget child, VoidCallback onPressed)
 	);
 }
 
+Widget rowItem(String title, Widget destWidget, BuildContext context) {
+	return Container(
+		padding: EdgeInsets.all(10),
+		child: Center(
+			child: RaisedButton(
+				child: Text(title),
+				onPressed: () => {
+					navigatorPush(context, destWidget)
+				}),
+		),
+	);
+}

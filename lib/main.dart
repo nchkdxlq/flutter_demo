@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/Container/ContainerEntry.dart';
 import 'package:flutterdemo/Util.dart';
 import 'package:flutterdemo/layout/LayoutEntry.dart';
 
@@ -81,7 +82,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: <Widget>[
-          layoutEntry()
+          layoutEntry(),
+          containerEntry()
         ],
       )
     );
@@ -90,6 +92,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget layoutEntry() {
     return createRowItem(context, Text('Layout'), () => {
       navigatorPush(context, LayoutEntry()) // 这里为什么不需要分号
+    });
+  }
+
+  Widget containerEntry() {
+    return createRowItem(context, Text('Container Widget'), () => {
+      navigatorPush(context, ContainerEntry())
     });
   }
 
