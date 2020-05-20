@@ -9,12 +9,17 @@ class CounterPage extends StatefulWidget {
   }
 }
 
-class CounterState extends State<StatefulWidget> {
+class CounterState extends State<StatefulWidget> with AutomaticKeepAliveClientMixin {
 
 	int _count = 0;
 
 	@override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => false;
+
+	@override
   Widget build(BuildContext context) {
+		super.build(context);
 		return Scaffold(
 			appBar: appBar(context),
 			body: body(context),
@@ -32,7 +37,7 @@ class CounterState extends State<StatefulWidget> {
 	}
 
 	AppBar appBar(BuildContext context) {
-		return null;
+		return AppBar(title: Text('CounterPage'),);
 	}
 
   Widget body(BuildContext context) {

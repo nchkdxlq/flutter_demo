@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/Container/ContainerEntry.dart';
 import 'package:flutterdemo/Util.dart';
-import 'package:flutterdemo/bottom_navigation_bar/BottomNavigationBarEntry.dart';
+import 'package:flutterdemo/bottom_navigation_bar/DefaultBottomNavigation.dart';
+import 'package:flutterdemo/bottom_navigation_bar/keep_alive/KeepAliveNavigation.dart';
 import 'package:flutterdemo/layout/LayoutEntry.dart';
 
 void main() {
@@ -86,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
           layoutEntry(),
           containerEntry(),
           bottomNavigationBarEntry(),
+          keepAliveNavigationEntry(),
         ],
       )
     );
@@ -104,7 +106,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget bottomNavigationBarEntry() {
-    return rowItem('BottomNavigationBar', BottomNavigationBarEntry());
+    return rowItem('default BottomNavigation', DefaultBottomNavigation());
+  }
+
+  Widget keepAliveNavigationEntry() {
+    return rowItem('keepAlive BottomNavigation', KeepAliveNavigation());
   }
 
   Widget rowItem(String title, Widget destWidget) {

@@ -5,15 +5,15 @@ import 'package:flutterdemo/bottom_navigation_bar/AirPlayPage.dart';
 import 'package:flutterdemo/bottom_navigation_bar/EmailPage.dart';
 import 'package:flutterdemo/bottom_navigation_bar/HomePage.dart';
 
-class BottomNavigationBarEntry extends StatefulWidget {
+class DefaultBottomNavigation extends StatefulWidget {
 	@override
   State<StatefulWidget> createState() {
-		return BottomNavigationBarState();
+		return DefaultBottomNavigationState();
   }
 }
 
 
-class BottomNavigationBarState extends State<BottomNavigationBarEntry> {
+class DefaultBottomNavigationState extends State<DefaultBottomNavigation> {
 
 	int _currentIndex = 0;
 	List<Widget> pages;
