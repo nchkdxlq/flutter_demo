@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/Container/ContainerEntry.dart';
 import 'package:flutterdemo/Util.dart';
+import 'package:flutterdemo/bottom_navigation_bar/BottomNavigationBarEntry.dart';
 import 'package:flutterdemo/layout/LayoutEntry.dart';
 
 void main() {
@@ -83,7 +84,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: <Widget>[
           layoutEntry(),
-          containerEntry()
+          containerEntry(),
+          bottomNavigationBarEntry(),
         ],
       )
     );
@@ -101,5 +103,13 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  Widget bottomNavigationBarEntry() {
+    return rowItem('BottomNavigationBar', BottomNavigationBarEntry());
+  }
 
+  Widget rowItem(String title, Widget destWidget) {
+    return createRowItem(context, Text(title), () => {
+        navigatorPush(context, destWidget)
+    });
+  }
 }

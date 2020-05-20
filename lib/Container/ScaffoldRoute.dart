@@ -36,8 +36,8 @@ class _ScaffoldRouteState extends State<ScaffoldRoute> with SingleTickerProvider
 			),
 //			drawer: myDrawer(),
 			body: body(context),
-			bottomNavigationBar: bottomAppBar(context),
-//			bottomNavigationBar: bottomNavigationBar(context),
+//			bottomNavigationBar: bottomAppBar(context),
+			bottomNavigationBar: bottomNavigationBar(context),
 			floatingActionButton: FloatingActionButton( // 悬浮按钮
 				child: Icon(Icons.add),
 				onPressed: _onAdd,
