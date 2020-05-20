@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/Container/ConstrainedBoxEntry.dart';
+import 'package:flutterdemo/Container/ScaffoldRoute.dart';
 import 'package:flutterdemo/Util.dart';
 
 class ContainerEntry extends StatelessWidget {
@@ -17,7 +18,8 @@ class ContainerEntry extends StatelessWidget {
   Widget body(BuildContext context) {
   	return Column(
 			children: <Widget>[
-				rowItem('ConstrainedBox', ConstrainedBoxEntry(), context)
+				rowItem('ConstrainedBox', ConstrainedBoxEntry(), context),
+				rowItem('ScaffoldRoute', ScaffoldRoute(), context),
 			],
 		);
 	}
