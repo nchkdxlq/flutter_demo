@@ -4,6 +4,7 @@ import 'package:flutterdemo/Util.dart';
 import 'package:flutterdemo/bottom_navigation_bar/DefaultBottomNavigation.dart';
 import 'package:flutterdemo/bottom_navigation_bar/keep_alive/KeepAliveNavigation.dart';
 import 'package:flutterdemo/layout/LayoutEntry.dart';
+import 'package:flutterdemo/scrollable_widget/ScrollableWidget.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Home Page'),
     );
   }
 }
@@ -88,6 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
           containerEntry(),
           bottomNavigationBarEntry(),
           keepAliveNavigationEntry(),
+          scrollableWidget(),
         ],
       )
     );
@@ -112,6 +114,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget keepAliveNavigationEntry() {
     return rowItem('keepAlive BottomNavigation', KeepAliveNavigation());
   }
+
+  Widget scrollableWidget() {
+    return rowItem('scrollable Widget', ScrollableWidget());
+  }
+
 
   Widget rowItem(String title, Widget destWidget) {
     return createRowItem(context, Text(title), () => {
