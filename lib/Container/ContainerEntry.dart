@@ -18,8 +18,8 @@ class ContainerEntry extends StatelessWidget {
   Widget body(BuildContext context) {
   	return Column(
 			children: <Widget>[
-				rowItem('ConstrainedBox', ConstrainedBoxEntry(), context),
-				rowItem('ScaffoldRoute', ScaffoldRoute(), context),
+				indicatorRowItem('ConstrainedBox', ConstrainedBoxEntry(), context),
+				indicatorRowItem('ScaffoldRoute', ScaffoldRoute(), context),
 			],
 		);
 	}

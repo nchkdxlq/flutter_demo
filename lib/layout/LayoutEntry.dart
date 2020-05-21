@@ -23,10 +23,10 @@ class LayoutEntry extends StatelessWidget {
 		return Container(
 			child: Column(
 				children: <Widget>[
-					rowItem('LinearLayout', LinearLayout(), context),
-					rowItem('FlexLayout', FlexLayout(), context),
-					rowItem('FlowLayout', FlowLayout(), context),
-					rowItem('AlignLayout', AlignLayout(), context),
+					indicatorRowItem('LinearLayout', LinearLayout(), context),
+					indicatorRowItem('FlexLayout', FlexLayout(), context),
+					indicatorRowItem('FlowLayout', FlowLayout(), context),
+					indicatorRowItem('AlignLayout', AlignLayout(), context),
 				],
 			),
 		);

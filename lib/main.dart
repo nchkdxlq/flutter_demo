@@ -96,15 +96,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget layoutEntry() {
-    return createRowItem(context, Text('Layout'), () => {
-      navigatorPush(context, LayoutEntry()) // 这里为什么不需要分号
-    });
+    return rowItem('Layout', LayoutEntry());
   }
 
   Widget containerEntry() {
-    return createRowItem(context, Text('Container Widget'), () => {
-      navigatorPush(context, ContainerEntry())
-    });
+    return rowItem('Container Widget', ContainerEntry());
   }
 
   Widget bottomNavigationBarEntry() {
@@ -121,8 +117,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
   Widget rowItem(String title, Widget destWidget) {
-    return createRowItem(context, Text(title), () => {
-        navigatorPush(context, destWidget)
-    });
+    return indicatorRowItem(title, destWidget, context);
   }
 }
