@@ -23,10 +23,7 @@ class CounterState extends State<StatefulWidget> with AutomaticKeepAliveClientMi
 		return Scaffold(
 			appBar: appBar(context),
 			body: body(context),
-			floatingActionButton: FloatingActionButton(
-				onPressed: incrementCounter,
-				child: Icon(Icons.add),
-			),
+			floatingActionButton: floatingActionButton(context),
 		);
   }
 
@@ -48,6 +45,13 @@ class CounterState extends State<StatefulWidget> with AutomaticKeepAliveClientMi
 					Text('$_count', style: TextStyle(fontSize: 40)),
 				],
 			),
+		);
+	}
+
+	FloatingActionButton floatingActionButton(BuildContext context) {
+		return FloatingActionButton(
+			onPressed: incrementCounter,
+			child: Icon(Icons.add),
 		);
 	}
 }

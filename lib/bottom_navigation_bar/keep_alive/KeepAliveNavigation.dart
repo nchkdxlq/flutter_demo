@@ -30,15 +30,7 @@ class KeepAliveNavigationState extends State<KeepAliveNavigation> with SingleTic
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
-			body: PageView(
-				controller: _controller,
-				children: <Widget>[
-					HomePage(),
-					EmailPage(),
-					AirPlayPage(),
-				],
-				physics: NeverScrollableScrollPhysics(),
-			),
+			body: body(context),
 			bottomNavigationBar: bottomNavigationBar(context),
 		);
 	}
