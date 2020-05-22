@@ -15,7 +15,8 @@ class ListViewWidget extends StatelessBaseWidget {
   Widget body(BuildContext context) {
 //    return defaultBuilder(context);
 //    return listViewBuild(context);
-    return listViewSeparated(context);
+//    return listViewSeparated(context);
+    return titleListView(context);
   }
 
   /// 适合只有少量子组件的情况
@@ -66,5 +67,25 @@ class ListViewWidget extends StatelessBaseWidget {
       },
     );
   }
-  
+
+  // 带有表头
+  Widget titleListView(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: ListTile(title: Text('商品列表'),),
+          color: Colors.grey,
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemCount: 100,
+            itemExtent: 50.0,
+            itemBuilder: (context, index) {
+            return ListTile(title: Text('$index'),);
+          }),
+        )
+      ],
+    );
+  }
+
 }
