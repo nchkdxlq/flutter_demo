@@ -26,3 +26,15 @@ Widget indicatorRowItem(String title, Widget destWidget, BuildContext context) {
 		navigatorPush(context, destWidget)
 	});
 }
+
+
+Container createBox({Color color, double width = 50, double height = 50, String text}) {
+	return Container(
+		color: color,
+		child: Center(
+			child: Text(text),
+		),
+		width: width,
+		height: height,
+	);
+}

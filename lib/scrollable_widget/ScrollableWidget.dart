@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/Util.dart';
+import 'package:flutterdemo/scrollable_widget/grid_view.dart';
 import 'package:flutterdemo/scrollable_widget/list_view.dart';
 import 'package:flutterdemo/scrollable_widget/single_child_scrollView.dart';
 
@@ -20,6 +21,7 @@ class ScrollableWidget extends StatelessWidget {
 			children: <Widget>[
 				indicatorRowItem('SingleChildScrollView', SingleChildScrollViewWidget(), context),
 				indicatorRowItem('ListView', ListViewWidget(), context),
+				indicatorRowItem(('GridView'), GridViewWidget(), context),
 			],
 		);
 	}

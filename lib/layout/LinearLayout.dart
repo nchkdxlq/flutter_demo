@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/Util.dart';
 
 class LinearLayout extends StatelessWidget {
 
@@ -49,19 +50,6 @@ class LinearLayout extends StatelessWidget {
 				createBox(color: Colors.blue, width: 100, height: 100, text: '2'),
 				createBox(color: Colors.green, width: 100, height: 100, text: '3'),
 			],
-		);
-	}
-
-
-
-	Container createBox({Color color, double width = 50, double height = 50, String text}) {
-		return Container(
-			color: color,
-			child: Center(
-				child: Text(text),
-			),
-			width: width,
-			height: height,
 		);
 	}
 
