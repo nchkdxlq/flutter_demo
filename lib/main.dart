@@ -3,6 +3,7 @@ import 'package:flutterdemo/Container/ContainerEntry.dart';
 import 'package:flutterdemo/Util.dart';
 import 'package:flutterdemo/bottom_navigation_bar/DefaultBottomNavigation.dart';
 import 'package:flutterdemo/bottom_navigation_bar/keep_alive/KeepAliveNavigation.dart';
+import 'package:flutterdemo/functional_widget/functional_widget.dart';
 import 'package:flutterdemo/layout/LayoutEntry.dart';
 import 'package:flutterdemo/scrollable_widget/ScrollableWidget.dart';
 
@@ -90,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
           bottomNavigationBarEntry(),
           keepAliveNavigationEntry(),
           scrollableWidget(),
+          functionalWidget(),
         ],
       )
     );
@@ -113,6 +115,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget scrollableWidget() {
     return rowItem('scrollable Widget', ScrollableWidget());
+  }
+
+  Widget functionalWidget() {
+    return rowItem('功能组件', FunctionalWidget());
   }
 
 
