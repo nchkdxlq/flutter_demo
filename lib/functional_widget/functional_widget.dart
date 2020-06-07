@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterdemo/Util.dart';
 import 'package:flutterdemo/functional_widget/inherited_widget.dart';
 import 'package:flutterdemo/functional_widget/provider_route.dart';
+import 'package:flutterdemo/functional_widget/theme_route.dart';
 
 class FunctionalWidget extends StatelessBaseWidget {
 
@@ -19,6 +20,7 @@ class FunctionalWidget extends StatelessBaseWidget {
 			children: <Widget>[
 				indicatorRowItem('InheritedWidget', InheritedWidgetRoute(), context),
 				indicatorRowItem('Provider', ProviderRoute(), context),
+				indicatorRowItem('Theme', ThemeTestRoute(), context),
 			],
 		);
   }
