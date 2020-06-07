@@ -38,7 +38,8 @@ class ProviderRouteState extends State<ProviderRoute> {
 								onPressed: () {
 									// 给购物车中添加商品，添加后总价会更新
 									var item = Item(price: 20.0, count: 2);
-									ChangeNotifierProvider.of<CartModel>(context).add(item);
+									// 这样改并没有效果，每次数据变化后，RaisedButton还是会构建
+									ChangeNotifierProvider.of<CartModel>(context, listen: false).add(item);
 								},
 							);
 						})
