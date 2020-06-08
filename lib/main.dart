@@ -3,6 +3,7 @@ import 'package:flutterdemo/Container/ContainerEntry.dart';
 import 'package:flutterdemo/Util.dart';
 import 'package:flutterdemo/bottom_navigation_bar/DefaultBottomNavigation.dart';
 import 'package:flutterdemo/bottom_navigation_bar/keep_alive/KeepAliveNavigation.dart';
+import 'package:flutterdemo/dart_syntax/dart_syntax.dart';
 import 'package:flutterdemo/functional_widget/functional_widget.dart';
 import 'package:flutterdemo/layout/LayoutEntry.dart';
 import 'package:flutterdemo/scrollable_widget/ScrollableWidget.dart';
@@ -86,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: <Widget>[
+          dartSyntax(),
           layoutEntry(),
           containerEntry(),
           bottomNavigationBarEntry(),
@@ -95,6 +97,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       )
     );
+  }
+
+  Widget dartSyntax() {
+    return rowItem('Dart Syntax', DartSyntax());
   }
 
   Widget layoutEntry() {
