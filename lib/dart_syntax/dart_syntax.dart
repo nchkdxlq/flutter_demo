@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/dart_syntax/class/class_entry.dart';
+import 'package:flutterdemo/dart_syntax/data_type.dart';
 import 'package:flutterdemo/dart_syntax/function_entry.dart';
 
 class DartSyntax extends StatefulWidget {
@@ -30,6 +31,7 @@ class DartSyntaxState extends State<DartSyntax> {
 	void dartEntry() {
 		classEntry();
 		functionEntry();
+		dataTypeEntry();
 	}
 
 }
